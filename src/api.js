@@ -21,9 +21,9 @@ router.post("/rssfeeds", (req, res) => {
 
   Promise.all(feedRequests)
     .then((response) => {
-      res.setHeader("Access-Control-Allow-Origin", "*");
+      // res.setHeader("Access-Control-Allow-Origin", "*");
       // res.setHeader('Access-Control-Allow-Origin', 'some-domain-to-allow.com');
-      res.header("Access-Control-Allow-Methods", "POST");
+      // res.header("Access-Control-Allow-Methods", "POST");
       res.json(response);
     })
     .catch((error) => {
